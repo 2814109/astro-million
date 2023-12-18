@@ -1,3 +1,7 @@
+import { useDataFetch } from "../hooks/sample";
 export const Sample = () => {
-  return <h1>test</h1>;
+  const fetchUrl = "https://pokeapi.co/api/v2/pokemon/ditto";
+  const { result } = useDataFetch(fetchUrl);
+  console.log(result);
+  return <h1>test : {result}</h1>;
 };
